@@ -17,7 +17,14 @@
           <li class="nav-item">
             <%= link_to "Bloggers", users_path, class: "nav-link" %>
           </li>
-
+          <li class="nav-item">
+            <%= link_to "View categories", categories_path, class: "nav-link" %>
+          </li>
+          <% if logged_in? && current_user.admin? %>
+            <li class="nav-item">
+              <%= link_to "Create new category", new_category_path, class: "nav-link" %>
+            </li>
+          <% end %>  
           <% if logged_in? %>
               <li class="nav-item">
                 <%= link_to "#{current_user.admin? ? "Admin":""} #{current_user.username}", user_path(current_user), class: "nav-link"%>
