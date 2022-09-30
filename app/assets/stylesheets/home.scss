@@ -1,0 +1,9 @@
+.jumbotron{
+    background-image: image-url('bg.jpg');
+    border-radius: 0!important;
+    background-size: cover;
+    color: white;
+}
+#sticky-footer {
+    flex-shrink: none;
+}
